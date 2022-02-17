@@ -35,6 +35,8 @@
             this.PauseBtn = new System.Windows.Forms.Button();
             this.StopBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.filePathTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +60,7 @@
             this.BrowseBtn.TabIndex = 1;
             this.BrowseBtn.Text = "BROWSE";
             this.BrowseBtn.UseVisualStyleBackColor = false;
+            this.BrowseBtn.Click += new System.EventHandler(this.BrowseBtn_Click);
             // 
             // PlayBtn
             // 
@@ -82,7 +85,6 @@
             this.PauseBtn.TabIndex = 3;
             this.PauseBtn.Text = "PAUSE";
             this.PauseBtn.UseVisualStyleBackColor = false;
-            this.PauseBtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // StopBtn
             // 
@@ -108,12 +110,27 @@
             this.ExitBtn.Text = "EXIT";
             this.ExitBtn.UseVisualStyleBackColor = false;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // filePathTextBox
+            // 
+            this.filePathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.filePathTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filePathTextBox.Location = new System.Drawing.Point(1, 462);
+            this.filePathTextBox.Multiline = true;
+            this.filePathTextBox.Name = "filePathTextBox";
+            this.filePathTextBox.Size = new System.Drawing.Size(314, 38);
+            this.filePathTextBox.TabIndex = 6;
+            // 
             // MusicPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.filePathTextBox);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.StopBtn);
             this.Controls.Add(this.PauseBtn);
@@ -127,6 +144,7 @@
             this.Text = "Music Player";
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -138,6 +156,8 @@
         private System.Windows.Forms.Button PauseBtn;
         private System.Windows.Forms.Button StopBtn;
         private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox filePathTextBox;
     }
 }
 

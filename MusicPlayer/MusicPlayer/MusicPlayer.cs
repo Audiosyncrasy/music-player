@@ -15,6 +15,15 @@ namespace MusicPlayer
         public MusicPlayer()
         {
             InitializeComponent();
+            MediaPlayer.uiMode = "None";
+        }
+
+        private void BrowseBtn_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filePathTextBox.Text = openFileDialog1.FileName;
+            }
         }
     }
 }
