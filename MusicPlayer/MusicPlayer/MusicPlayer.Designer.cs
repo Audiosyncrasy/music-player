@@ -29,18 +29,84 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MusicPlayer));
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.BrowseBtn = new System.Windows.Forms.Button();
+            this.PlayBtn = new System.Windows.Forms.Button();
+            this.PauseBtn = new System.Windows.Forms.Button();
+            this.StopBtn = new System.Windows.Forms.Button();
+            this.ExitBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
-            // axWindowsMediaPlayer1
+            // MediaPlayer
             // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 12);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(760, 537);
-            this.axWindowsMediaPlayer1.TabIndex = 0;
+            this.MediaPlayer.Enabled = true;
+            this.MediaPlayer.Location = new System.Drawing.Point(0, 0);
+            this.MediaPlayer.Name = "MediaPlayer";
+            this.MediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("MediaPlayer.OcxState")));
+            this.MediaPlayer.Size = new System.Drawing.Size(784, 500);
+            this.MediaPlayer.TabIndex = 0;
+            // 
+            // BrowseBtn
+            // 
+            this.BrowseBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BrowseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BrowseBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrowseBtn.Location = new System.Drawing.Point(1, 500);
+            this.BrowseBtn.Name = "BrowseBtn";
+            this.BrowseBtn.Size = new System.Drawing.Size(157, 60);
+            this.BrowseBtn.TabIndex = 1;
+            this.BrowseBtn.Text = "BROWSE";
+            this.BrowseBtn.UseVisualStyleBackColor = false;
+            // 
+            // PlayBtn
+            // 
+            this.PlayBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.PlayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PlayBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayBtn.Location = new System.Drawing.Point(158, 500);
+            this.PlayBtn.Name = "PlayBtn";
+            this.PlayBtn.Size = new System.Drawing.Size(157, 60);
+            this.PlayBtn.TabIndex = 2;
+            this.PlayBtn.Text = "PLAY";
+            this.PlayBtn.UseVisualStyleBackColor = false;
+            // 
+            // PauseBtn
+            // 
+            this.PauseBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.PauseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PauseBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PauseBtn.Location = new System.Drawing.Point(314, 500);
+            this.PauseBtn.Name = "PauseBtn";
+            this.PauseBtn.Size = new System.Drawing.Size(157, 60);
+            this.PauseBtn.TabIndex = 3;
+            this.PauseBtn.Text = "PAUSE";
+            this.PauseBtn.UseVisualStyleBackColor = false;
+            this.PauseBtn.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // StopBtn
+            // 
+            this.StopBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.StopBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.StopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StopBtn.Location = new System.Drawing.Point(470, 500);
+            this.StopBtn.Name = "StopBtn";
+            this.StopBtn.Size = new System.Drawing.Size(157, 60);
+            this.StopBtn.TabIndex = 4;
+            this.StopBtn.Text = "STOP";
+            this.StopBtn.UseVisualStyleBackColor = false;
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Location = new System.Drawing.Point(626, 500);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(157, 60);
+            this.ExitBtn.TabIndex = 5;
+            this.ExitBtn.Text = "EXIT";
+            this.ExitBtn.UseVisualStyleBackColor = false;
             // 
             // MusicPlayer
             // 
@@ -48,20 +114,30 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.StopBtn);
+            this.Controls.Add(this.PauseBtn);
+            this.Controls.Add(this.PlayBtn);
+            this.Controls.Add(this.BrowseBtn);
+            this.Controls.Add(this.MediaPlayer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "MusicPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Music Player";
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private AxWMPLib.AxWindowsMediaPlayer MediaPlayer;
+        private System.Windows.Forms.Button BrowseBtn;
+        private System.Windows.Forms.Button PlayBtn;
+        private System.Windows.Forms.Button PauseBtn;
+        private System.Windows.Forms.Button StopBtn;
+        private System.Windows.Forms.Button ExitBtn;
     }
 }
 
