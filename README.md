@@ -8,5 +8,5 @@ The purpose of this project is to practice C# skills in bite-sized, easy to dige
 Core functionality is based on the built-in Windows Media Player (WMP). The GUI has been removed, and the basic file selection and transport functionality has been assigned to the buttons at the bottom of the application window.
 
 ## Future Enhancements
-- [] Instead of having the Play button display an alert when the user clicks it, disable the button until a file has been selected.
-- [] Disable Pause and Stop button when no file has been selected
+- [ ] Instead of having the Play button display an alert when the user clicks it, disable the button until a file has been selected.
+- [ ] Disable Pause and Stop button when no file has been selected
