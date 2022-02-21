@@ -25,7 +25,6 @@ namespace MusicPlayer
             {
                 filePathTextBox.Text = openFileDialog1.FileName;
             }
-
             MediaPlayer.URL = filePathTextBox.Text;
         }
 
