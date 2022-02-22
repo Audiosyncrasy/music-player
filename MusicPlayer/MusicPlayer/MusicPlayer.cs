@@ -16,6 +16,7 @@ namespace MusicPlayer
         {
             InitializeComponent();
             MediaPlayer.uiMode = "None";
+            MediaPlayer.settings.autoStart = false;
         }
 
         private void BrowseBtn_Click(object sender, EventArgs e)
@@ -24,19 +25,21 @@ namespace MusicPlayer
             {
                 filePathTextBox.Text = openFileDialog1.FileName;
             }
+            MediaPlayer.URL = filePathTextBox.Text;
         }
 
         private void PlayBtn_Click(object sender, EventArgs e)
         {
-            if (MediaPlayer.URL != String.Empty)
-            {
-                MediaPlayer.Ctlcontrols.play();
-            }
-            string msg = "No media file selected. Please click the Browse button and select a media file.";
-            string caption = "No media file selected";
-            MessageBoxButtons btns = MessageBoxButtons.OK;
+            string currentUrl = MediaPlayer.URL;
 
-            MessageBox.Show(msg, caption, btns, MessageBoxIcon.Warning);
+            if (currentUrl == string.Empty)
+            {
+                string msg = "No media file selected. Please click the Browse button and select a media file.";
+                string caption = "No media file selected";
+                MessageBoxButtons btns = MessageBoxButtons.OK;
+
+                MessageBox.Show(msg, caption, btns, MessageBoxIcon.Warning);
+            }
 
             MediaPlayer.Ctlcontrols.play();
         }
